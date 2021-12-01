@@ -4,6 +4,16 @@
 }
 
 $main-container-width: 1200px;
+@mixin grid-common-div {
+    div {
+        background-color: #ccc;
+        padding: 20px;
+
+        &:nth-child(odd) {
+            background-color: #efefef;
+        }
+    }
+}
 
 body {
     font-family: "Roboto", sans-serif;
@@ -29,15 +39,24 @@ header {
     .grid-display-1 {
         display: grid;
         grid-template-columns: 70% 30%;
-        grid-gap: 8px;
+        grid-column-gap: 20px;
 
-        div {
-            background-color: #ccc;
-            padding: 20px;
-
-            &:nth-child(odd) {
-                background-color: #efefef;
-            }
-        }
+        @include grid-common-div;
     }
+
+    .grid-display-2 {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-column-gap: 20px;
+        grid-row-gap:10px;
+        @include grid-common-div;
+    }
+}
+
+.mt-4{
+    margin-top:8px;
+}
+
+.mt-8{
+    margin-top:16px;
 }

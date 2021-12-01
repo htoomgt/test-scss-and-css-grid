@@ -25,7 +25,7 @@ header .header-content {
 .container-main .grid-display-1 {
   display: grid;
   grid-template-columns: 70% 30%;
-  grid-gap: 8px;
+  grid-column-gap: 20px;
 }
 .container-main .grid-display-1 div {
   background-color: #ccc;
@@ -33,6 +33,27 @@ header .header-content {
 }
 .container-main .grid-display-1 div:nth-child(odd) {
   background-color: #efefef;
+}
+.container-main .grid-display-2 {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+}
+.container-main .grid-display-2 div {
+  background-color: #ccc;
+  padding: 20px;
+}
+.container-main .grid-display-2 div:nth-child(odd) {
+  background-color: #efefef;
+}
+
+.mt-4 {
+  margin-top: 8px;
+}
+
+.mt-8 {
+  margin-top: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */
