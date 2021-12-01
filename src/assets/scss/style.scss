@@ -52,6 +52,17 @@ header {
     width: $main-container-width;
     margin: 16px auto;
 
+    ul{
+        li{
+            margin-left: 32px;
+            margin-top: 8px;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: cornflowerblue;
+    }
+
     @media screen and (max-width: 1000px) {
         width: $main-conatiner-width-non-desktop;
     }
@@ -114,6 +125,18 @@ header {
                 border: 1px solid #000;
             }
         }
+    }
+
+    .grid-display-6 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap:20px;
+        margin:0 0 0 0;
+        // border:1px solid #000;        
+        
+
+        @include grid-template-one-column;
+        @include grid-common-div;
     }
 }
 
