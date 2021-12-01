@@ -1,14 +1,12 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 $main-container-width: 1200px;
 
-
-
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -16,24 +14,30 @@ body{
     background-color: #fff;
 }
 
-header{
-    .header-content{
+header {
+    .header-content {
         width: $main-container-width;
         margin: 0 auto;
-        border-bottom: 1px solid #e5e5e5;       
+        border-bottom: 1px solid #e5e5e5;
     }
 }
 
-.container-main{
+.container-main {
     width: $main-container-width;
-    margin: 8px auto;
-    display: flex;
+    margin: 16px auto;
 
-    .content{
-        background-color:aliceblue;    
-    }
+    .grid-display-1 {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-gap: 8px;
 
-    .right-menu{
-        background-color:beige
+        div {
+            background-color: #ccc;
+            padding: 20px;
+
+            &:nth-child(odd) {
+                background-color: #efefef;
+            }
+        }
     }
 }

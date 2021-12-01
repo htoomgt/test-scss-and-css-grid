@@ -20,14 +20,19 @@ header .header-content {
 
 .container-main {
   width: 1200px;
-  margin: 8px auto;
-  display: flex;
+  margin: 16px auto;
 }
-.container-main .content {
-  background-color: aliceblue;
+.container-main .grid-display-1 {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-gap: 8px;
 }
-.container-main .right-menu {
-  background-color: beige;
+.container-main .grid-display-1 div {
+  background-color: #ccc;
+  padding: 20px;
+}
+.container-main .grid-display-1 div:nth-child(odd) {
+  background-color: #efefef;
 }
 
 /*# sourceMappingURL=style.css.map */
