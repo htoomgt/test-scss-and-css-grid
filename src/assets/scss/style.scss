@@ -4,6 +4,8 @@
 }
 
 $main-container-width: 1200px;
+$main-conatiner-width-non-desktop:100%;
+
 @mixin grid-common-div {
     div {
         background-color: #ccc;
@@ -12,6 +14,12 @@ $main-container-width: 1200px;
         &:nth-child(odd) {
             background-color: #efefef;
         }
+    }
+}
+
+@mixin grid-template-one-column {
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -30,16 +38,30 @@ header {
         margin: 0 auto;
         border-bottom: 1px solid #e5e5e5;
     }
+
+    @media screen and (max-width: 1000px) {
+        .header-content {
+            width: $main-conatiner-width-non-desktop;
+        }
+    }
+        
+    
 }
 
 .container-main {
     width: $main-container-width;
     margin: 16px auto;
 
+    @media screen and (max-width: 1000px) {
+        width: $main-conatiner-width-non-desktop;
+    }
+
     .grid-display-1 {
         display: grid;
         grid-template-columns: 70% 30%;
         grid-column-gap: 20px;
+
+        @include grid-template-one-column;
 
         @include grid-common-div;
     }
@@ -49,6 +71,8 @@ header {
         grid-template-columns: 70% 30%;
         grid-column-gap: 20px;
         grid-row-gap:10px;
+
+        @include grid-template-one-column;
         @include grid-common-div;
     }
 }

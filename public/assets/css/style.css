@@ -17,15 +17,30 @@ header .header-content {
   margin: 0 auto;
   border-bottom: 1px solid #e5e5e5;
 }
+@media screen and (max-width: 1000px) {
+  header .header-content {
+    width: 100%;
+  }
+}
 
 .container-main {
   width: 1200px;
   margin: 16px auto;
 }
+@media screen and (max-width: 1000px) {
+  .container-main {
+    width: 100%;
+  }
+}
 .container-main .grid-display-1 {
   display: grid;
   grid-template-columns: 70% 30%;
   grid-column-gap: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .container-main .grid-display-1 {
+    grid-template-columns: 1fr;
+  }
 }
 .container-main .grid-display-1 div {
   background-color: #ccc;
@@ -39,6 +54,11 @@ header .header-content {
   grid-template-columns: 70% 30%;
   grid-column-gap: 20px;
   grid-row-gap: 10px;
+}
+@media screen and (max-width: 1000px) {
+  .container-main .grid-display-2 {
+    grid-template-columns: 1fr;
+  }
 }
 .container-main .grid-display-2 div {
   background-color: #ccc;
